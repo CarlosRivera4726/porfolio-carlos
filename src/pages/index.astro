@@ -1,0 +1,82 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import BriefCaseIcon from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import Experience from "../components/Experience.astro";
+import SocialNet from "../components/SocialNet.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+---
+
+<Layout
+  title="👨‍💻 Portfolio de Carlos Rivera - Desarrollador y Programador de software"
+  description="Contrata a Carlos Rivera como desarrollador de software, enfocado en el lado del backend."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-22">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        ¡Hola!, soy Carlos Rivera <a
+          href="https://www.linkedin.com/in/carlos-rivera-g-c"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-white text-2xl opacity-80" text-wrap>
+        Practicante como desarrollador de software, +10 meses de experiencia en
+        semillero de investigacion, estoy enfocado en el lado del backend. Me
+        gusta aprender y compartir conocimiento.
+        <strong
+          ><span class="text-yellow-500">
+            Estoy interesado en el desarrollo de software</span
+          >, <span class="text-blue-600">desarrollo web</span> y <span
+            class="text-red-800/90"
+          >
+            desarrollo de APIS REST.</span
+          >
+        </strong>
+        <span class="text-yellow-100/90">De Colombia, Cauca 🇨🇴.</span>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 text-white flex-wrap">
+        <SocialNet href="https://www.linkedin.com/in/carlos-rivera-g-c">
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </SocialNet>
+
+        <SocialNet href="https://github.com/CarlosRivera4726">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </SocialNet>
+
+        <SocialNet href="https://www.linkedin.com/in/carlos-rivera">
+          <MailIcon class="size-4 md:size-6" />
+           carlosrivera_-717@hotmail.com
+        </SocialNet>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCaseIcon class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+         Proyectos
+      </h2>
+      <Experience />
+    </SectionContainer>
+  </main>
+</Layout>

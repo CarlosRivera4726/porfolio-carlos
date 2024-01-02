@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Febrero 2020 - Noviembre 2020",
+    company: "Unicomfacauca - Semillero IA&BG",
+    title: "Líder y coordinador de proyecto",
+    description:
+      "Coordinación de proyecto 'Detección del uso incorrecto del tapabocas' usando visión por computadora y machine learning con python.",
+    link: "https://www.unicomfacauca.edu.co/investigacion/semilleros-de-investigacion/#1608132355012-4a8ccd5c-2231",
+  },
+  {
+    date: "Febrero 2018 - Noviembre 2019",
+    company: "Institución Educativa Metropolitano María Occidente - IEMMO",
+    title: "Técnico en Sistemas",
+    description:
+      "Mantenimiento preventivo y correctivo de equipos de cómputo, instalación de redes, soporte técnico.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
