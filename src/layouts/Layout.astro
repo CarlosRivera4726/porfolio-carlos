@@ -20,8 +20,8 @@ const { title, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <div class="relative h-full w-full bg-slate-950">
+  <body class="realtive text-black dark:text-white">
+    <div class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-slate-950">
       <Header />
       <slot />
       <Footer />
@@ -39,15 +39,22 @@ const { title, description } = Astro.props;
   }
 
   body {
-    background: #050505;
+    color: rgba(17, 17, 17, 0.9);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overscroll-behavior: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: rgba(255, 255, 255, 0.9);
+      background-color: rgb(2 6 23);
     }
   }
 </style>
