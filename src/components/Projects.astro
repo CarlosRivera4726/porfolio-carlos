@@ -1,0 +1,62 @@
+---
+import JavaIcon from "./icons/Java.astro";
+import SpringIcon from "./icons/Spring.astro";
+import MysqlIcon from "./icons/Mysql.astro";
+import SwaggerIcon from "./icons/Swagger.astro";
+
+const TAGS ={
+    JAVA: {
+        name: "Java",
+        class: "yellow-500",
+        icon: JavaIcon
+    },
+    SPRING: {
+        name: "SpringBoot",
+        class: "green-500",
+        icon: SpringIcon
+    },
+    MYSQL: {
+      name: "Mysql",
+      class: "blue-500",
+      icon: MysqlIcon
+    },
+    SWAGGER:{
+      name: "Swagger",
+      class: "purple-500",
+      icon: SwaggerIcon
+    }
+}
+const PROJECTS = [
+  {
+    title: "Server Votaciones",
+    description:
+      "Proyecto personal para el manejo adecuado en las elecciones, con el fin de aprender a crear Apis usando el Framework de Java SpringBoot y Mysql como gestor de bases de datos.",
+    link: "https://github.com/CarlosRivera4726/server_votaciones",
+    github: "https://github.com/CarlosRivera4726/server_votaciones",
+    image: "/projects/project_server.png",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL, TAGS.SWAGGER],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-500/90 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty" >{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-4" >
+        {
+            tags.map((tag) => (
+                <li>
+                  <span class={`bg-[#003159] flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 hover:scale-110 hover:bg-[#056cc1]/80 hover:font-semibold transition`}>
+                    <tag.icon class="size-4"/>
+                    {tag.name}
+                  </span>
+                </li>
+            ))
+        }
+      </ul>
+      <img class="rounded shadow-2xl shadow-white/20"  src={image} alt=`Captura de pantalla del proyecto ${title}` />
+    </article>
+  ))
+}

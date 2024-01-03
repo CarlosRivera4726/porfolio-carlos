@@ -9,6 +9,7 @@ import SocialNet from "../components/SocialNet.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -16,7 +17,7 @@ import Badge from "../components/Badge.astro";
   description="Contrata a Carlos Rivera como desarrollador de software, enfocado en el lado del backend."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-22">
+    <SectionContainer class="py-44 pb-32">
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
@@ -64,7 +65,7 @@ import Badge from "../components/Badge.astro";
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <BriefCaseIcon class="size-7" />
          Experiencia laboral
       </h2>
@@ -72,11 +73,11 @@ import Badge from "../components/Badge.astro";
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
          Proyectos
       </h2>
-      <Experience />
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
