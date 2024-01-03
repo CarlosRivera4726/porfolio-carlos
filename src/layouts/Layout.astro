@@ -22,10 +22,11 @@ const { title, description } = Astro.props;
   </head>
   <body class="realtive text-black dark:text-white">
     <div class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-slate-950">
-      <Header />
-      <slot />
-      <Footer />
+      
     </div>
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
