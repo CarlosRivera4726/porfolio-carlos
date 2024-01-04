@@ -17,7 +17,7 @@ import Projects from "../components/Projects.astro";
   description="Contrata a Carlos Rivera como desarrollador de software, enfocado en el lado del backend."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
+    <SectionContainer class="py-32 lg:py-44 pb-32">
       <h1
         class="text-dark dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
@@ -30,7 +30,10 @@ import Projects from "../components/Projects.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-dark dark:text-white text-xl lg:text-2xl opacity-80" text-wrap>
+      <h2
+        class="text-dark dark:text-white text-xl lg:text-2xl opacity-80"
+        text-wrap
+      >
         Practicante como desarrollador de software, +10 meses de experiencia en
         semillero de investigacion, estoy enfocado en el lado del backend. Me
         gusta aprender y compartir conocimiento.
@@ -43,23 +46,25 @@ import Projects from "../components/Projects.astro";
             desarrollo de APIS REST.</span
           >
         </strong>
-        <span class="text-yellow-500 dark:text-yellow-100/90">De Colombia, Cauca 🇨🇴.</span>
+        <span class="text-yellow-500 dark:text-yellow-100/90"
+          >De Colombia, Cauca 🇨🇴.</span
+        >
       </h2>
 
       <nav class="flex gap-4 mt-8 text-white flex-wrap">
         <SocialNet href="https://www.linkedin.com/in/carlos-rivera-g-c">
           <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
+          LinkedIn
         </SocialNet>
 
         <SocialNet href="https://github.com/CarlosRivera4726">
           <GitHubIcon class="size-4 md:size-6" />
-           GitHub
+          GitHub
         </SocialNet>
 
         <SocialNet href="mailto:carlosrivera_-717@hotmail.com">
           <MailIcon class="size-4 md:size-6" />
-           carlosrivera_-717@hotmail.com
+          carlosrivera_-717@hotmail.com
         </SocialNet>
       </nav>
     </SectionContainer>
@@ -67,7 +72,7 @@ import Projects from "../components/Projects.astro";
     <SectionContainer id="experiencia">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <BriefCaseIcon class="size-7" />
-         Experiencia laboral
+        Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
@@ -75,7 +80,7 @@ import Projects from "../components/Projects.astro";
     <SectionContainer id="proyectos">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
-         Proyectos
+        Proyectos
       </h2>
       <Projects />
     </SectionContainer>
