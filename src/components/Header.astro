@@ -26,15 +26,15 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class=" fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex px-3 xsm:text-xs font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     <a href="/#home">
       <img
         loading="lazy"
-        class="rounded-full sm:size-11/12 mb-1 md:size-8 md:my-3 sm:text-sm sm:mb-3"
+        class="rounded-full xsm:size-6 md:size-10"
         src="images/representacion.webp"
         alt="carlos photo"/>
     </a>
@@ -104,7 +104,9 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-gray-800/90 ring-white/10 text-white;
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/70 ring-white/10 text-black dark:text-white;
+      
     }
+    
   }
 </style>
