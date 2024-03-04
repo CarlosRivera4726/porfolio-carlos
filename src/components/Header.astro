@@ -31,10 +31,17 @@ const navItems = [
   <nav
     class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
+    <a href="/#init">
+      <img
+        loading="lazy"
+        class="rounded-full size-10 mb-1 md:size-8 md:my-3 md:mb-3"
+        src="images/representacion.webp"
+        alt="carlos photo"/>
+    </a>
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-400"
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={link.label}
           href={link.url}
         >
@@ -97,7 +104,7 @@ const navItems = [
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-gray-800/90 ring-white/10 text-white;
     }
   }
 </style>

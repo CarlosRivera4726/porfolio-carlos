@@ -1,0 +1,66 @@
+---
+const personalImageAlt = "Carlos Rivera";
+import Badge from "@/components/Badge.astro";
+import SocialNet from "./SocialNet.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import CvIcon from "./icons/Cv.astro";
+import MailIcon from "./icons/Mail.astro";
+---
+
+<div class="max-w-xl">
+  <h1
+    class="text-dark dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+  >
+    ¡Hola!, soy Carlos Rivera <a
+      href="https://www.linkedin.com/in/carlos-rivera-g-c"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex justify-center items-center"
+    >
+      <Badge>Trabajando</Badge>
+    </a>
+  </h1>
+  <h2
+    class="text-dark dark:text-white text-xl lg:text-2xl opacity-80"
+    text-wrap
+  >
+    Practicante como desarrollador de software, +10 meses de experiencia en
+    semillero de investigacion, estoy enfocado en el lado del backend. Me gusta
+    aprender y compartir conocimiento.
+    <strong
+      ><span class="text-yellow-500">
+        Estoy interesado en el desarrollo de software</span
+      >, <span class="text-blue-600">desarrollo web</span> y <span
+        class="text-red-500"
+      >
+        desarrollo de APIS REST.</span
+      >
+    </strong>
+    <span class="text-yellow-500 dark:text-yellow-100/90"
+      >De Colombia, Cauca 🇨🇴.</span
+    >
+  </h2>
+
+  <nav class="flex gap-4 mt-8 text-white flex-wrap">
+    <SocialNet href="https://www.linkedin.com/in/carlos-rivera-g-c">
+      <LinkedInIcon class="size-4 md:size-6" />
+      LinkedIn
+    </SocialNet>
+
+    <SocialNet href="https://github.com/CarlosRivera4726">
+      <GitHubIcon class="size-4 md:size-6" />
+      GitHub
+    </SocialNet>
+
+    <SocialNet href="files/Carlos_Rivera.pdf" download="Cv_Carlos_Rivera.pdf">
+      <CvIcon class="size-4 md:size-6" />
+      Hova de vida
+    </SocialNet>
+
+    <SocialNet href="mailto:carlosrivera_-717@hotmail.com">
+      <MailIcon class="size-4 md:size-6" />
+      carlosrivera_-717@hotmail.com
+    </SocialNet>
+  </nav>
+</div>
