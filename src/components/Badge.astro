@@ -1,5 +1,8 @@
+---
+const {class: className, ...rest} = Astro.props
+---
 <span
-  class="bg-[#5f0d0d] text-[#c6c6c6] text-xs font-medium me-2 px-2.5 py-0.5 rounded"
+  class="{className} bg-[#5f0d0d] text-[#e5e5e5] text-xs font-medium me-2 px-2.5 py-0.5 rounded {..rest}"
 >
   <slot />
 </span>
