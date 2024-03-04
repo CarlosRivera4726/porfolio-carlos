@@ -1,6 +1,7 @@
 ---
 import SectionContainer from "../components/SectionContainer.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import CvIcon from "../components/icons/Cv.astro";
 import BriefCaseIcon from "../components/icons/BriefCase.astro";
 import CodeIcon from "../components/icons/Code.astro";
@@ -10,6 +11,7 @@ import SocialNet from "../components/SocialNet.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import AboutMe from "../components/AboutMe.astro";
 import Projects from "../components/Projects.astro";
 ---
 
@@ -28,7 +30,7 @@ import Projects from "../components/Projects.astro";
           rel="noopener noreferrer"
           class="flex justify-center items-center"
         >
-          <Badge>Disponible para trabajar</Badge>
+          <Badge>Trabajando</Badge>
         </a>
       </h1>
       <h2
@@ -92,6 +94,14 @@ import Projects from "../components/Projects.astro";
         Proyectos Personales
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
