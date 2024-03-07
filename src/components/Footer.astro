@@ -2,19 +2,12 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="text-black flex pb-2 pt-2 bg-[#e8adff80] dark:bg-[#1e042975] mx-60 rounded-full justify-between items-center mdx:mx-24 mdx:my-10 my-18">
-<div
-class="rounded-lg max-w-screen-xl w-11/12 mx-auto md:flex md:items-center md:justify-between py-4"
->
-    <span class="text-sm dark:text-white sm:text-center text-black"
-      >© {currentYear} <a
-        href="https://linkedin.com/in/carlos-rivera-g-c"
-        class="hover:underline">Carlos Rivera</a
-      >
-    </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium text-black dark:text-white sm:mt-0"
-    >
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {currentYear} <a href="https://linkedin.com/in/carlos-rivera-g-c" class="hover:underline">Carlos Rivera</a>. Todos los derechos reservados.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+       
       <li>
         <a href="#" class="hover:underline me-4 md:me-6">Sobre mí</a>
       </li>
