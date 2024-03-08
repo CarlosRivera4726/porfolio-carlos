@@ -2,8 +2,10 @@
 import SectionContainer from "@/components/SectionContainer.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import BriefCaseIcon from "@/components/icons/BriefCase.astro";
+import InvestigativeIcon from "@/components/icons/Investigative.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import Experience from "@/components/Experience.astro";
+import InvestigativeExperience from "@/components/InvestigativeExperience.astro";
 import Layout from "@/layouts/Layout.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import Projects from "@/components/Projects.astro";
@@ -17,18 +19,25 @@ import Me from "@/components/Me.astro";
   <main class="mdx:px-36 px-4">
     <SectionContainer id="home" class="py-16 md:py-36">
       <Me>
-        <slot/>
+        <slot />
       </Me>
     </SectionContainer>
 
     <div class="space-y-24">
-
-      <SectionContainer id="experiencia">
-        <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <SectionContainer id="experiencia" class:list={"pb-2 mb-1"}>
+        <h2 class="text-3xl font-semibold mb-1 flex gap-x-3 items-center">
           <BriefCaseIcon class="size-7" />
           Experiencia laboral
         </h2>
         <Experience />
+      </SectionContainer>
+
+      <SectionContainer>
+        <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+          <InvestigativeIcon class="size-7" />
+          Experiencia Investigativa
+        </h2>
+        <InvestigativeExperience />
       </SectionContainer>
 
       <SectionContainer id="proyectos">
@@ -40,7 +49,9 @@ import Me from "@/components/Me.astro";
       </SectionContainer>
 
       <SectionContainer id="sobre-mi">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        >
           <ProfileCheck class="size-8" />
           Sobre mí
         </h2>
