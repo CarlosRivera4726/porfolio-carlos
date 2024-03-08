@@ -17,35 +17,38 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
   </head>
   <body class="relative text-black dark:text-white">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-neutral-100 dark:bg-slate-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]">
+      class="absolute top-0 -z-10 h-full w-full bg-white dark:inset-0 items-center dark:px-5 dark:py-24 dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+    >
+      <div
+        class="absolute bottom-auto left-auto right-0 top-0 xl:h-[400px] xl:w-[450px] 2xl:h-[500px] 2xl:w-[500px] -translate-x-[150%] xl:translate-y-[20%] 2xl:translate-y-[5%] rounded-full bg-[rgba(173,109,244,0.5)] dark:bg-[rgba(155,68,255,0.73)] opacity-50 blur-[80px]"
+      >
+      </div>
     </div>
     <Header />
 
     <slot />
 
     <Footer />
-  
-<style is:global>
-  :root {
-    color-scheme: light dark;
-  }
 
-  html {
-    font-family: "Onest Variable", system-ui, sans-serif;
-    scroll-behavior: smooth;
-    //background-color: rgb(245 245 245);
-  }
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+      }
 
-  body {
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        scroll-behavior: smooth;
+        //background-color: rgb(245 245 245);
+      }
+
+      body {
         color: rgba(17, 17, 17, 0.9);
         display: flex;
         flex-direction: column;
@@ -53,18 +56,18 @@ const { title, description } = Astro.props;
         overscroll-behavior: none;
       }
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
 
-  @media (prefers-color-scheme: dark) {
+      @media (prefers-color-scheme: dark) {
         body {
           color: rgba(255, 255, 255, 0.9);
         }
-  }
-  #header-nav {
+      }
+      #header-nav {
         animation: blur linear both 0.5s;
         animation-timeline: scroll();
         animation-range: 0 500px;
@@ -95,7 +98,6 @@ const { title, description } = Astro.props;
           }
         }
       }
-</style>
-
-</body>
+    </style>
+  </body>
 </html>
