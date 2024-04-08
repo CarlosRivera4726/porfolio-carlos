@@ -1,85 +1,11 @@
 ---
-import JavaIcon from "./icons/Java.astro";
-import SpringIcon from "./icons/Spring.astro";
-import MysqlIcon from "./icons/Mysql.astro";
-import SwaggerIcon from "./icons/Swagger.astro";
-import PythonIcon from "./icons/Python.astro";
-import FlaskIcon from "./icons/Flask.astro";
-import OpencvIcon from "./icons/Opencv.astro";
-import AstroIcon from "./icons/AstroI.astro";
 import GitHubIcon from "./icons/GitHub.astro";
-import TailwindIcon from "./icons/Tailwind.astro";
-
-const TAGS ={
-    JAVA: {
-        name: "Java",
-        class: "yellow-500",
-        icon: JavaIcon
-    },
-    SPRING: {
-        name: "SpringBoot",
-        class: "green-500",
-        icon: SpringIcon
-    },
-    MYSQL: {
-      name: "Mysql",
-      class: "blue-500",
-      icon: MysqlIcon
-    },
-    SWAGGER:{
-      name: "Swagger",
-      class: "purple-500",
-      icon: SwaggerIcon
-    },
-    PYTHON: {
-      name: "Python",
-      class: "blue-500",
-      icon: PythonIcon
-    },
-    FLASK: {
-      name: "Flask",
-      class: "black",
-      icon: FlaskIcon
-    },
-    OPENCV: {
-      name: "Opencv",
-      class: "black",
-      icon: OpencvIcon
-    },
-    ASTRO: {
-      name: "Astro",
-      class: "black",
-      icon: AstroIcon
-    },
-    TAILWINDCSS: {
-      name: "Tailwindcss",
-      class: "black",
-      icon: TailwindIcon
-    }
-  }
-  const PROJECTS = [
-    {
-      title: "Server Votaciones",
-      description:
-        "Para el manejo adecuado en las elecciones, con el fin de aprender a crear Apis usando el Framework de Java SpringBoot y Mysql como gestor de bases de datos.",
-      link: "https://github.com/CarlosRivera4726/server_votaciones",
-      github: "https://github.com/CarlosRivera4726/server_votaciones",
-      image: "/projects/project_server.webp",
-      tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL, TAGS.SWAGGER],
-    },
-    {
-      title: "Text Extractor from Images",
-      description:"Permite al usuario subir una imagen y extraer el texto de dicha imagen,usando Python, Flask, Opencv y otras tecnologías.",
-      image: "/projects/text_extractor.webp",
-      link: "https://github.com/CarlosRivera4726/extract_text_image",
-      github: "https://github.com/CarlosRivera4726/extract_text_image",
-      tags: [TAGS.PYTHON, TAGS.FLASK, TAGS.OPENCV]
-    },
-];
+import Link from './icons/Link.astro';
+import {PROJECTS} from './technologies/PersonalProjects.astro';
 ---
 
 {
-  PROJECTS.map(({ title, description, tags, image, github }) => (
+  PROJECTS.map(({ title, description, tags, image, github, link }) => (
     <article class="py-5 gap-x-4 md-4">
       <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-500/90 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty" >{description}</p>
@@ -100,11 +26,20 @@ const TAGS ={
               <span>
               <a href={github} target="_blank" rel="noopener noreferrer" class={`text-white dark:text-dark bg-[#003159] dark:bg-[#003159] flex gap-x-2 rounded-full text-sm py-1 px-2 hover:scale-105 hover:bg-[#195281]/80 hover:font-semibold transition`}  >
                 <GitHubIcon class="size-5"/>  
-                Click aquí para ir al repositorio
+                Repositorio
               </a>
             </span>
             )
           }
+          {
+            link && (
+            <span>
+              <a href={link} target="_blank" rel="noopener noreferrer" class={`text-white dark:text-dark bg-[#003159] dark:bg-[#003159] flex gap-x-2 rounded-full text-sm py-1 px-2 hover:scale-105 hover:bg-[#195281]/80 hover:font-semibold transition`}  >
+                <Link class="size-5"/>  
+                Vista Previa
+              </a>
+            </span>
+          )}
       </ul>
       <img class="rounded hover:shadow-2xl transition hover:shadow-white/20"  src={image} alt=`Captura de pantalla del proyecto ${title}` />
     </article>

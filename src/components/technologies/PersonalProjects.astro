@@ -1,0 +1,29 @@
+---
+import { TAGS } from "./Tags.astro";
+export const PROJECTS = [
+  {
+    title: "Generador de reportes - Vidanova",
+    description:
+      "Para generar reportes apartir de un formato especificado por el encargado de calidad de la empresa, se recibe un archivo en formato csv con la información necesaria y se envia al servidor, el cual hace todo el proceso y genera los reportes necesarios, dependiendo de la cantidad de usuarios.",
+    link: "https://reportesvidanova.netlify.app/",
+    image: "/projects/reportesVidanova.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.ASTRO],
+  },
+  {
+    title: "Server Votaciones",
+    description:
+      "Para el manejo adecuado en las elecciones, con el fin de aprender a crear Apis usando el Framework de Java SpringBoot y Mysql como gestor de bases de datos.",
+    github: "https://github.com/CarlosRivera4726/server_votaciones",
+    image: "/projects/project_server.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL, TAGS.SWAGGER],
+  },
+  {
+    title: "Text Extractor from Images",
+    description:
+      "Permite al usuario subir una imagen y extraer el texto de dicha imagen,usando Python, Flask, Opencv y otras tecnologías.",
+    image: "/projects/text_extractor.webp",
+    github: "https://github.com/CarlosRivera4726/extract_text_image",
+    tags: [TAGS.PYTHON, TAGS.FLASK, TAGS.OPENCV],
+  },
+];
+---
