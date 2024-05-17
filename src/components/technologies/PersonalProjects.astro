@@ -2,6 +2,27 @@
 import { TAGS } from "./Tags.astro";
 export const PROJECTS = [
   {
+    title: "TECH STORE - FRONTEND",
+    description:
+      "E-commerce de tecnología, con la finalidad de aprender a usar Angular, TailwindCss, TypeScript, también usamos Angular Material para algunos componentes y para las animaciones.",
+    github: "https://github.com/CarlosRivera4726/LearningAngular",
+    image: "/projects/tech_store.avif",
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWINDCSS,
+      TAGS.ANGULAR,
+      TAGS.ANGULAR_MATERIAL,
+    ],
+  },
+  {
+    title: "TECH STORE - BACKEND",
+    description:
+      "API del E-commerce de tecnología, desarrollada con Next.js, TypeScript, MySQL y Prisma ORM. El objetivo principal de este proyecto es aprender y aplicar estas tecnologías en el desarrollo de una aplicación de comercio electrónico.",
+    github: "https://github.com/CarlosRivera4726/LearningNestjs",
+    image: "/projects/tech_store_api.avif",
+    tags: [TAGS.NESTJS, TAGS.MYSQL, TAGS.TYPESCRIPT, TAGS.PRISMA, TAGS.SWAGGER],
+  },
+  {
     title: "Generador de reportes - Vidanova",
     description:
       "Para generar reportes apartir de un formato especificado por el encargado de calidad de la empresa, se recibe un archivo en formato csv con la información necesaria y se envia al servidor, el cual hace todo el proceso y genera los reportes necesarios, dependiendo de la cantidad de usuarios.",
