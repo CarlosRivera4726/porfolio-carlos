@@ -1,5 +1,5 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
+import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
   {
@@ -22,11 +22,11 @@ const navItems = [
     label: "contacto",
     url: "mailto:carlosrivera_-717@hotmail.com",
   },
-]
+];
 ---
 
 <header
-  class=" fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
     class="flex mdx:text-xl px-3 xsm:text-xs sm:text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
@@ -35,8 +35,9 @@ const navItems = [
       <img
         loading="lazy"
         class="mdx:size-10 rounded-full xsm:size-6 sm:size-8"
-        src="images/representacion.webp"
-        alt="carlos photo"/>
+        src="images/me.webp"
+        alt="carlos photo"
+      />
     </a>
     {
       navItems.map((link) => (
@@ -49,50 +50,50 @@ const navItems = [
         </a>
       ))
     }
-   <ThemeToggle />
+    <ThemeToggle />
   </nav>
 </header>
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-blue-500")
+              item.classList.add("text-blue-500");
             } else {
-              item.classList.remove("text-blue-500")
+              item.classList.remove("text-blue-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
@@ -105,8 +106,6 @@ const navItems = [
   @keyframes nav-shadown {
     to {
       @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/70 ring-white/10 text-black dark:text-white;
-      
     }
-    
   }
 </style>
